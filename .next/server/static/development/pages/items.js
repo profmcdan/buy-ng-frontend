@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -493,13 +493,13 @@ var Title = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.h3.withConf
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function (amount) {
   var options = {
-    style: 'currency',
-    currency: 'USD',
+    style: "currency",
+    currency: "NGN",
     minimumFractionDigits: 2
   }; // if its a whole, dollar amount, leave off the .00
 
   if (amount % 100 === 0) options.minimumFractionDigits = 0;
-  var formatter = new Intl.NumberFormat('en-US', options);
+  var formatter = new Intl.NumberFormat("en-NG", options);
   return formatter.format(amount / 100);
 });
 
@@ -556,7 +556,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/items.js ***!
   \******************************/

@@ -90,6 +90,7 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(CreateItem)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
+      file: "",
       title: "",
       description: "",
       image: "",
@@ -121,30 +122,31 @@ function (_Component) {
                 console.log("Uploading file...");
                 files = e.target.files;
                 data = new FormData();
+                data.append("file", files[0]);
                 data.append("upload_preset", "buyng_app");
-                _context.next = 6;
+                _context.next = 7;
                 return fetch("https://api.cloudinary.com/v1_1/dm9ykdajq/image/upload", {
                   method: "POST",
                   body: data
                 });
 
-              case 6:
+              case 7:
                 res = _context.sent;
-                _context.next = 9;
+                _context.next = 10;
                 return res.json();
 
-              case 9:
+              case 10:
                 file = _context.sent;
-                _context.next = 12;
+                _context.next = 13;
                 return _this.setState({
                   image: file.secure_url,
                   largeImage: file.eager[0].secure_url
                 });
 
-              case 12:
+              case 13:
                 console.log(file);
 
-              case 13:
+              case 14:
               case "end":
                 return _context.stop();
             }
@@ -168,15 +170,15 @@ function (_Component) {
       var _this$state = this.state,
           title = _this$state.title,
           description = _this$state.description,
-          image = _this$state.image,
-          largeImage = _this$state.largeImage,
-          price = _this$state.price;
+          price = _this$state.price,
+          file = _this$state.file,
+          image = _this$state.image;
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_2__["Mutation"], {
         mutation: CREATE_ITEM_MUTATION,
         variables: this.state,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 70
         },
         __self: this
       }, function (createItem, _ref2) {
@@ -221,14 +223,14 @@ function (_Component) {
           }(),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 70
+            lineNumber: 72
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ErrorMessage__WEBPACK_IMPORTED_MODULE_6__["default"], {
           error: error,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 80
+            lineNumber: 82
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", {
@@ -236,14 +238,14 @@ function (_Component) {
           "aria-busy": loading,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 82
+            lineNumber: 84
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
           htmlFor: "file",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 83
+            lineNumber: 85
           },
           __self: this
         }, "Title"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
@@ -251,19 +253,26 @@ function (_Component) {
           name: "file",
           id: "file",
           placeholder: "Upload an image",
-          required: true,
-          value: image,
+          value: file,
           onChange: _this2.uploadFile,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 84
+            lineNumber: 86
+          },
+          __self: this
+        }), image && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+          src: image,
+          alt: "Uplaod Preview",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 94
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
           htmlFor: "title",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 94
+            lineNumber: 96
           },
           __self: this
         }, "Title"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
@@ -276,14 +285,14 @@ function (_Component) {
           onChange: _this2.handleChange,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 95
+            lineNumber: 97
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
           htmlFor: "price",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 105
+            lineNumber: 107
           },
           __self: this
         }, "Price"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
@@ -295,14 +304,14 @@ function (_Component) {
           onChange: _this2.handleChange,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 106
+            lineNumber: 108
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
           htmlFor: "description",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 115
+            lineNumber: 117
           },
           __self: this
         }, "Description"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("textarea", {
@@ -314,14 +323,14 @@ function (_Component) {
           onChange: _this2.handleChange,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 116
+            lineNumber: 118
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
           type: "submit",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 124
+            lineNumber: 126
           },
           __self: this
         }, "Submit")));
@@ -338,4 +347,4 @@ function (_Component) {
 /***/ })
 
 })
-//# sourceMappingURL=sell.js.c2e991f8c54c80f40ba8.hot-update.js.map
+//# sourceMappingURL=sell.js.e4306994aa323daefb83.hot-update.js.map

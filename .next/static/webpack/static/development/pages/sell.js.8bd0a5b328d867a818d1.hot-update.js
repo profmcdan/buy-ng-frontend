@@ -300,7 +300,7 @@ function (_Component) {
           name: "price",
           id: "price",
           required: true,
-          value: price,
+          value: Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_7__["default"])(price),
           onChange: _this2.handleChange,
           __source: {
             fileName: _jsxFileName,
@@ -347,4 +347,4 @@ function (_Component) {
 /***/ })
 
 })
-//# sourceMappingURL=sell.js.91e9e8a34edfe55efc8c.hot-update.js.map
+//# sourceMappingURL=sell.js.8bd0a5b328d867a818d1.hot-update.js.map

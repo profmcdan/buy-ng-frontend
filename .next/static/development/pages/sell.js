@@ -464,13 +464,13 @@ var Form = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].form.withCo
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function (amount) {
   var options = {
-    style: 'currency',
-    currency: 'USD',
+    style: "currency",
+    currency: "NGN",
     minimumFractionDigits: 2
   }; // if its a whole, dollar amount, leave off the .00
 
   if (amount % 100 === 0) options.minimumFractionDigits = 0;
-  var formatter = new Intl.NumberFormat('en-US', options);
+  var formatter = new Intl.NumberFormat("en-NG", options);
   return formatter.format(amount / 100);
 });
 
@@ -29063,7 +29063,7 @@ var Sell = function Sell(props) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!*****************************!*\
   !*** multi ./pages/sell.js ***!
   \*****************************/
@@ -29088,5 +29088,5 @@ module.exports = dll_5d62d38be3592dca3a42;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]));;
+},[[4,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=sell.js.map
