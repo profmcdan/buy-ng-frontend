@@ -181,7 +181,7 @@ var Header = function Header() {
       lineNumber: 64
     },
     __self: this
-  }, "Sick Fist"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, "Buy-NG"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 67
@@ -276,7 +276,7 @@ var Meta = function Meta() {
       lineNumber: 9
     },
     __self: this
-  }, "Sick Fits!"));
+  }, "Buy-NG!"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Meta);
