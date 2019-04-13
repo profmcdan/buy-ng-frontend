@@ -48,6 +48,7 @@ const Pagination = props => (
             Page {props.page} of {pages}
           </p>
           <Link
+            prefetch
             href={{
               pathname: "/items",
               query: { page: page + 1 },

@@ -113,6 +113,8 @@ var Pagination = function Pagination(props) {
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      className: "prev",
+      "aria-disabled": page <= 1,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 43
@@ -121,10 +123,11 @@ var Pagination = function Pagination(props) {
     }, "Prev")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 47
       },
       __self: this
     }, "Page ", props.page, " of ", pages), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      prefetch: true,
       href: {
         pathname: "/items",
         query: {
@@ -133,13 +136,15 @@ var Pagination = function Pagination(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 50
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      className: "nxt",
+      "aria-disabled": page == pages,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 57
       },
       __self: this
     }, "Next")));
@@ -152,4 +157,4 @@ var Pagination = function Pagination(props) {
 /***/ })
 
 })
-//# sourceMappingURL=items.js.6f88d6fe9012de626d6c.hot-update.js.map
+//# sourceMappingURL=items.js.a2c2c7850a854696527e.hot-update.js.map

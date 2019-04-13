@@ -5,6 +5,8 @@ import Router from "next/router";
 import Form from "./styles/Form";
 import Error from "./ErrorMessage";
 import formatMoney from "../lib/formatMoney";
+import updateCache from "../lib/updateCache";
+import { ALL_ITEMS_QUERY } from "./Items";
 
 const CREATE_ITEM_MUTATION = gql`
   mutation CREATE_ITEM_MUTATION(
@@ -67,7 +69,12 @@ class CreateItem extends Component {
   render() {
     const { title, description, price, file, image } = this.state;
     return (
-      <Mutation mutation={CREATE_ITEM_MUTATION} variables={this.state}>
+      <Mutation
+        mutation={CREATE_ITEM_MUTATION}
+        variables={this.state}
+        update={updateCache}
+        // refetchQueries={ALL_ITEMS_QUERY}
+      >
         {(createItem, { loading, error }) => (
           <Form
             onSubmit={async e => {
